@@ -8,3 +8,5 @@ vim.opt.scrolloff = 8
 vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = "80"
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
