@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.expandtab = false
 vim.opt.scrolloff = 999
 vim.opt.sidescrolloff = 8
+vim.opt.sidescroll = 1
 vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = "80"
