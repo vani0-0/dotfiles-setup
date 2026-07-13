@@ -1,10 +1,88 @@
 local ls = require("luasnip")
-local s  = ls.snippet
-local t  = ls.text_node
-local i  = ls.insert_node
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
 
 return {
+	-- ── Imports ────────────────────────────────────────────────────────────
 
+	-- Flutter
+	s("impf", {
+		t("import 'package:flutter/material.dart';"),
+	}),
+
+	-- Flutter + Riverpod (ConsumerWidget / ConsumerStatefulWidget)
+	s("impcw", {
+		t({
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_riverpod/flutter_riverpod.dart';",
+		}),
+	}),
+
+	-- Flutter Hooks
+	s("imph", {
+		t({
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_hooks/flutter_hooks.dart';",
+		}),
+	}),
+
+	-- Hooks Riverpod
+	s("imphr", {
+		t({
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_hooks/flutter_hooks.dart';",
+			"import 'package:hooks_riverpod/hooks_riverpod.dart';",
+		}),
+	}),
+
+	-- Riverpod annotation (for @riverpod)
+	s("imprg", {
+		t({
+			"import 'package:riverpod_annotation/riverpod_annotation.dart';",
+			"",
+			"part 'provider.g.dart';",
+		}),
+	}),
+
+	-- Freezed model
+	s("impmodel", {
+		t({
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part 'model.freezed.dart';",
+			"part 'model.g.dart';",
+		}),
+	}),
+
+	-- Freezed union/state
+	s("impstate", {
+		t({
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part 'state.freezed.dart';",
+		}),
+	}),
+
+	-- Dio
+	s("impdio", {
+		t("import 'package:dio/dio.dart';"),
+	}),
+
+	-- GoRouter
+	s("impgo", {
+		t("import 'package:go_router/go_router.dart';"),
+	}),
+
+	-- Intl
+	s("impintl", {
+		t("import 'package:intl/intl.dart';"),
+	}),
+
+	-- Collection
+	s("impcol", {
+		t("import 'package:collection/collection.dart';"),
+	}),
 	-- ── Widgets ────────────────────────────────────────────────────────────
 
 	s("stl", {
@@ -43,7 +121,13 @@ return {
 		i(1, "MyWidget"),
 		t({ " extends ConsumerWidget {", "\tconst " }),
 		i(2, "MyWidget"),
-		t({ "({super.key});", "", "\t@override", "\tWidget build(BuildContext context, WidgetRef ref) {", "\t\treturn " }),
+		t({
+			"({super.key});",
+			"",
+			"\t@override",
+			"\tWidget build(BuildContext context, WidgetRef ref) {",
+			"\t\treturn ",
+		}),
 		i(3, "Container()"),
 		t({ ";", "\t}", "}" }),
 	}),
