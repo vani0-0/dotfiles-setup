@@ -12,6 +12,9 @@ return {
 				selection_caret = " ",
 				path_display = { "truncate" },
 				sorting_strategy = "ascending",
+				preview = {
+					treesitter = false,
+				},
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
